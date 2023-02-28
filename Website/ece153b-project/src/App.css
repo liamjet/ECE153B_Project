@@ -40,9 +40,3 @@
     line-height: 23px;
     color: white;
 }
-
-Content {
-    position: absolute;
-    bottom: 40px;
-    background-color: blue;
-}
