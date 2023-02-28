@@ -1,0 +1,10 @@
+.Content {
+    background-color: white;
+    border-radius: 20px;
+    width: 95vw;
+    height: 500vh;
+    display: flex;
+    position: absolute;
+    top: 90vh;
+    left: 2.5vw;
+}

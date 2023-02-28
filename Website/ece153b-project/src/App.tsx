@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Content from "./components/Content";
 
 function App() {
     return (
         <div className="App">
             <div className="Hero">
-                <div className="HeroText">
+                <div className="HeroWrapper">
                     <h1 className="Title">
                         Roommate Snore Detector and Corrector
                     </h1>
@@ -15,6 +16,7 @@ function App() {
                     </p>
                 </div>
             </div>
+            <Content></Content>
         </div>
     );
 }
