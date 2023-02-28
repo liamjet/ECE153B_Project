@@ -16,6 +16,7 @@ The Snore Detector and Corrector will detect the user's roommate’s snoring and
 [LCD Wiki](http://www.lcdwiki.com/2.8inch_SPI_Module_ILI9341_SKU:MSP2807) <br>
 
 ### Microphone <br>
+[Amazon](https://www.amazon.com/Adafruit-I2S-MEMS-Microphone-Breakout/dp/B06XNL2GBW)
 
 ### Speaker <br>
 
