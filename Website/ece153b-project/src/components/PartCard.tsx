@@ -4,7 +4,10 @@ import "./PartCard.css";
 function PartCard(props: any) {
     return (
         <div className="PartCard">
-            <div className="image">{props.image}</div>
+            <div
+                className="image"
+                style={{ backgroundImage: `url(${props.image})` }}
+            ></div>
             <div className="description">
                 <h3>{props.name}</h3>
                 {props.children}

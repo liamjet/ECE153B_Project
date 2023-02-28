@@ -4,6 +4,12 @@ import "./App.css";
 import Content from "./components/Content";
 import TabBar from "./components/TabBar";
 import Paragraph from "./components/Paragraph";
+import PartCard from "./components/PartCard";
+import Stm32 from "./resources/Stm32.png";
+import Bluetooth from "./resources/Bluetooth.jpg";
+import LCD from "./resources/LCD.jpeg";
+import Speaker from "./resources/Speaker.jpeg";
+import Microphone from "./resources/Microphone.jpeg";
 
 function App() {
     return (
@@ -55,6 +61,88 @@ function App() {
                 </Paragraph>
                 <Paragraph header="Block Diagram:"></Paragraph>
                 <Paragraph header="Video Demonstration:"></Paragraph>
+                <div className="cardGrid">
+                    <PartCard name="STM32L476RG" image={Stm32}>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quas, atque!
+                            </li>
+                            <li>
+                                Deleniti dolores reprehenderit blanditiis
+                                incidunt porro cum. Deleniti, provident facilis?
+                            </li>
+                            <li>
+                                Non, fugiat temporibus ut animi sunt ab minus
+                                magni maiores.
+                            </li>
+                        </ul>
+                    </PartCard>
+                    <PartCard name="Microphone" image={Microphone}>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quas, atque!
+                            </li>
+                            <li>
+                                Deleniti dolores reprehenderit blanditiis
+                                incidunt porro cum. Deleniti, provident facilis?
+                            </li>
+                            <li>
+                                Non, fugiat temporibus ut animi sunt ab minus
+                                magni maiores.
+                            </li>
+                        </ul>
+                    </PartCard>
+                    <PartCard name="Bluetooth" image={Bluetooth}>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quas, atque!
+                            </li>
+                            <li>
+                                Deleniti dolores reprehenderit blanditiis
+                                incidunt porro cum. Deleniti, provident facilis?
+                            </li>
+                            <li>
+                                Non, fugiat temporibus ut animi sunt ab minus
+                                magni maiores.
+                            </li>
+                        </ul>
+                    </PartCard>
+                    <PartCard name="Speaker" image={Speaker}>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quas, atque!
+                            </li>
+                            <li>
+                                Deleniti dolores reprehenderit blanditiis
+                                incidunt porro cum. Deleniti, provident facilis?
+                            </li>
+                            <li>
+                                Non, fugiat temporibus ut animi sunt ab minus
+                                magni maiores.
+                            </li>
+                        </ul>
+                    </PartCard>
+                    <PartCard name="LCD" image={LCD}>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quas, atque!
+                            </li>
+                            <li>
+                                Deleniti dolores reprehenderit blanditiis
+                                incidunt porro cum. Deleniti, provident facilis?
+                            </li>
+                            <li>
+                                Non, fugiat temporibus ut animi sunt ab minus
+                                magni maiores.
+                            </li>
+                        </ul>
+                    </PartCard>
+                </div>
             </Content>
         </div>
     );
