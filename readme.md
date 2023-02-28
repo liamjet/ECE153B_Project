@@ -15,10 +15,14 @@ The Snore Detector and Corrector will detect the user's roommate’s snoring and
 [Amazon](https://www.amazon.com/HiLetgo-240X320-Resolution-Display-ILI9341/dp/B073R7BH1B) <br>
 [LCD Wiki](http://www.lcdwiki.com/2.8inch_SPI_Module_ILI9341_SKU:MSP2807) <br>
 
-### Microphone <br>
-[Amazon](https://www.amazon.com/Adafruit-I2S-MEMS-Microphone-Breakout/dp/B06XNL2GBW)
+### Adafruit I2S MEMS Microphone <br>
+[Amazon](https://www.amazon.com/Adafruit-I2S-MEMS-Microphone-Breakout/dp/B06XNL2GBW) <br>
+[Guide](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout/) <br>
 
-### Speaker <br>
+The Adafruit I2S MEMS Microphone is a pure digital microphone which can be interfaced to the STM board by using a SPI block as I2S. The STM board has seven SPI blocks so there will be no compatibility issues with the SPI Display.
+
+### Adafruit I2C Stereo 2.8W Class D Audio Amplifier (SUBJECT TO CHANGE) <br>
+[Amazon](https://www.amazon.com/Stereo-2-8W-Class-Audio-Amplifier/dp/B096YFBBFF) <br>
 
 ## Block Diagram
 <img width="500" alt="Picture1" src="https://user-images.githubusercontent.com/61168583/221713957-f15b9de0-710e-4668-9106-0fa8c4420742.png">
