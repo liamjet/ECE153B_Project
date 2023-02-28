@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+.Background {
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./resources/background.png");
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.HeroWrapper {
+    max-width: 1000px;
+    margin: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Title {
+    font-family: "Georgia";
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 68px;
+    color: white;
+    max-width: 1000px;
+    margin: 0;
 }
-
-.App-link {
-  color: #61dafb;
+.Subtitle {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    margin: 0;
+}
+.cardGrid {
+    max-width: 880px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+@media (max-width: 800px) {
+    .cardGrid {
+        max-width: 400px;
+        grid-template-columns: 1fr;
+    }
 }
