@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/liamjet/ECE153B_Project/static/css/main.073c9b0a.css",
-    "main.js": "/liamjet/ECE153B_Project/static/js/main.0b34f35f.js",
-    "static/js/787.747972bf.chunk.js": "/liamjet/ECE153B_Project/static/js/787.747972bf.chunk.js",
-    "static/media/logo.svg": "/liamjet/ECE153B_Project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/liamjet/ECE153B_Project/index.html",
-    "main.073c9b0a.css.map": "/liamjet/ECE153B_Project/static/css/main.073c9b0a.css.map",
-    "main.0b34f35f.js.map": "/liamjet/ECE153B_Project/static/js/main.0b34f35f.js.map",
-    "787.747972bf.chunk.js.map": "/liamjet/ECE153B_Project/static/js/787.747972bf.chunk.js.map"
+    "main.css": "/ECE153B_Project/static/css/main.073c9b0a.css",
+    "main.js": "/ECE153B_Project/static/js/main.8463cd86.js",
+    "static/js/787.747972bf.chunk.js": "/ECE153B_Project/static/js/787.747972bf.chunk.js",
+    "static/media/logo.svg": "/ECE153B_Project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ECE153B_Project/index.html",
+    "main.073c9b0a.css.map": "/ECE153B_Project/static/css/main.073c9b0a.css.map",
+    "main.8463cd86.js.map": "/ECE153B_Project/static/js/main.8463cd86.js.map",
+    "787.747972bf.chunk.js.map": "/ECE153B_Project/static/js/787.747972bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.0b34f35f.js"
+    "static/js/main.8463cd86.js"
   ]
 }
