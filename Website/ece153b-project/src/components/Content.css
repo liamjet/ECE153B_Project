@@ -2,7 +2,6 @@
     background-color: white;
     border-radius: 20px;
     width: calc(95vw - 80px);
-    height: 500vh;
     display: flex;
     position: absolute;
     top: 95vh;

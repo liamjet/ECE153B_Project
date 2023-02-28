@@ -4,19 +4,3 @@
     flex-direction: column;
     width: 100%;
 }
-.Header {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-}
-
-p {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    margin: 0;
-}

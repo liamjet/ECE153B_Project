@@ -5,6 +5,7 @@ import Content from "./components/Content";
 import TabBar from "./components/TabBar";
 import Paragraph from "./components/Paragraph";
 import PartCard from "./components/PartCard";
+import Timeline from "./components/Timeline";
 import Stm32 from "./resources/Stm32.png";
 import Bluetooth from "./resources/Bluetooth.jpg";
 import LCD from "./resources/LCD.jpeg";
@@ -143,6 +144,114 @@ function App() {
                         </ul>
                     </PartCard>
                 </div>
+                <Timeline header="Week 1">
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Aliquid error, omnis quae ad fugit et eum
+                            architecto dolor nulla veritatis ipsam recusandae
+                            asperiores. Amet, optio! Maxime dolor qui commodi
+                            nostrum necessitatibus. Vel similique unde quasi
+                            sint eaque! Aliquid eveniet praesentium magni
+                            dolorum quam nemo vel enim voluptatibus, nobis quod
+                            ad.
+                        </li>
+                        <li>
+                            Repellendus placeat, praesentium nam ex odio culpa
+                            est magnam aut dolor suscipit, totam iure, cum
+                            maxime labore dolorum nulla ipsum eligendi deleniti
+                            fuga. Rerum quae numquam libero blanditiis pariatur
+                            animi rem veritatis, nobis dicta provident nisi
+                            totam tempore impedit atque inventore error dolorum?
+                            Rerum, id et ipsam odio quia facilis.
+                        </li>
+                        <li>
+                            Minus quaerat voluptatem fugit inventore in
+                            voluptates praesentium consectetur. Ratione non
+                            magni in impedit aliquam alias enim, molestias
+                            voluptate, libero adipisci assumenda, quos ex
+                            excepturi voluptatibus voluptatem! Unde, fuga
+                            possimus molestias mollitia repellat, eaque expedita
+                            omnis temporibus, dolores delectus ipsam. Officia
+                            atque ducimus provident! Accusamus ratione
+                            exercitationem laborum rerum esse.
+                        </li>
+                        <li>
+                            Repudiandae nulla ducimus, obcaecati blanditiis,
+                            dignissimos commodi aliquam, iure tempora recusandae
+                            quas exercitationem nisi quibusdam eum repellat nemo
+                            porro dolor consequuntur mollitia sapiente odio
+                            ullam! Animi non unde, corporis placeat ratione
+                            cupiditate. Beatae eligendi, accusamus aut numquam
+                            id enim earum molestiae delectus illum debitis rem
+                            explicabo dolorem vel quasi sapiente!
+                        </li>
+                        <li>
+                            Rem asperiores id dolor ea placeat ullam facere?
+                            Nihil, porro corrupti explicabo nesciunt, esse
+                            asperiores eos commodi sequi repellat ut tempore?
+                            Earum non error ad reprehenderit culpa dignissimos
+                            tempore veniam perferendis repudiandae tenetur
+                            aliquid quaerat voluptatibus impedit, ipsum ipsam
+                            provident dolore nam quibusdam expedita dolores
+                            dolorem cupiditate temporibus? Minus, repellendus!
+                        </li>
+                    </ul>
+                </Timeline>
+                <Timeline header="Week 2">
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Aliquid error, omnis quae ad fugit et eum
+                            architecto dolor nulla veritatis ipsam recusandae
+                            asperiores. Amet, optio! Maxime dolor qui commodi
+                            nostrum necessitatibus. Vel similique unde quasi
+                            sint eaque! Aliquid eveniet praesentium magni
+                            dolorum quam nemo vel enim voluptatibus, nobis quod
+                            ad.
+                        </li>
+                        <li>
+                            Repellendus placeat, praesentium nam ex odio culpa
+                            est magnam aut dolor suscipit, totam iure, cum
+                            maxime labore dolorum nulla ipsum eligendi deleniti
+                            fuga. Rerum quae numquam libero blanditiis pariatur
+                            animi rem veritatis, nobis dicta provident nisi
+                            totam tempore impedit atque inventore error dolorum?
+                            Rerum, id et ipsam odio quia facilis.
+                        </li>
+                        <li>
+                            Minus quaerat voluptatem fugit inventore in
+                            voluptates praesentium consectetur. Ratione non
+                            magni in impedit aliquam alias enim, molestias
+                            voluptate, libero adipisci assumenda, quos ex
+                            excepturi voluptatibus voluptatem! Unde, fuga
+                            possimus molestias mollitia repellat, eaque expedita
+                            omnis temporibus, dolores delectus ipsam. Officia
+                            atque ducimus provident! Accusamus ratione
+                            exercitationem laborum rerum esse.
+                        </li>
+                        <li>
+                            Repudiandae nulla ducimus, obcaecati blanditiis,
+                            dignissimos commodi aliquam, iure tempora recusandae
+                            quas exercitationem nisi quibusdam eum repellat nemo
+                            porro dolor consequuntur mollitia sapiente odio
+                            ullam! Animi non unde, corporis placeat ratione
+                            cupiditate. Beatae eligendi, accusamus aut numquam
+                            id enim earum molestiae delectus illum debitis rem
+                            explicabo dolorem vel quasi sapiente!
+                        </li>
+                        <li>
+                            Rem asperiores id dolor ea placeat ullam facere?
+                            Nihil, porro corrupti explicabo nesciunt, esse
+                            asperiores eos commodi sequi repellat ut tempore?
+                            Earum non error ad reprehenderit culpa dignissimos
+                            tempore veniam perferendis repudiandae tenetur
+                            aliquid quaerat voluptatibus impedit, ipsum ipsam
+                            provident dolore nam quibusdam expedita dolores
+                            dolorem cupiditate temporibus? Minus, repellendus!
+                        </li>
+                    </ul>
+                </Timeline>
             </Content>
         </div>
     );
