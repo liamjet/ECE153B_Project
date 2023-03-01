@@ -79,7 +79,7 @@ function App() {
                             </li>
                         </ul>
                     </PartCard>
-                    <PartCard name="Microphone" image={Microphone}>
+                    <PartCard name="I2S MEMS Microphone" image={Microphone}>
                         <ul>
                             <li>
                                 Lorem ipsum dolor sit amet consectetur
@@ -95,7 +95,7 @@ function App() {
                             </li>
                         </ul>
                     </PartCard>
-                    <PartCard name="Bluetooth" image={Bluetooth}>
+                    <PartCard name="HC-05 Bluetooth Chip" image={Bluetooth}>
                         <ul>
                             <li>
                                 Lorem ipsum dolor sit amet consectetur
@@ -127,7 +127,7 @@ function App() {
                             </li>
                         </ul>
                     </PartCard>
-                    <PartCard name="LCD" image={LCD}>
+                    <PartCard name="2.8 TFT SPI 240X320 V1.2" image={LCD}>
                         <ul>
                             <li>
                                 Lorem ipsum dolor sit amet consectetur
