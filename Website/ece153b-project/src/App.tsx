@@ -1,8 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Content from "./components/Content";
-import TabBar from "./components/TabBar";
 import Paragraph from "./components/Paragraph";
 import PartCard from "./components/PartCard";
 import Timeline from "./components/Timeline";
@@ -11,8 +11,15 @@ import Bluetooth from "./resources/Bluetooth.jpg";
 import LCD from "./resources/LCD.jpeg";
 import Speaker from "./resources/Speaker.jpeg";
 import Microphone from "./resources/Microphone.jpeg";
+import BlockDiagram from "./resources/Block-Diagram.png";
 
 function App() {
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index: number) => {
+        setToggleState(index);
+    };
+
     return (
         <div className="App">
             <div className="Hero">
@@ -26,232 +33,149 @@ function App() {
                 </div>
             </div>
             <Content>
-                <TabBar></TabBar>
-                <Paragraph header="Purpose:">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Error facilis quo quam dignissimos aperiam a saepe
-                        facere reiciendis sit ipsum officiis maiores, fugiat
-                        ipsam molestiae, eveniet id repellendus, corporis alias
-                        nam. Numquam dicta minima labore doloribus?
-                        Necessitatibus cumque quasi minus a eos tempora
-                        molestiae, iste vitae eum repudiandae repellendus rerum
-                        culpa accusamus nobis velit dolor, ea exercitationem?
-                        Omnis impedit tempore velit voluptatibus placeat
-                        cupiditate maxime alias illum aliquid quo a fugiat, rem
-                        ratione earum itaque explicabo libero natus ipsam
-                        veritatis! Hic, sunt numquam. Rerum voluptates
-                        reiciendis magnam id qui temporibus, recusandae mollitia
-                        dolorem natus odit quibusdam, dolorum consectetur at
-                        incidunt ducimus quisquam nobis repellat labore minus
-                        quod voluptatum adipisci! Debitis earum beatae incidunt
-                        dignissimos eveniet vitae doloribus labore aspernatur ad
-                        dolorem quidem nobis magnam possimus, qui nihil quod
-                        inventore fugit, harum tempore nulla? Obcaecati
-                        molestiae quo at vero numquam eligendi cupiditate ipsam
-                        accusantium, sed assumenda placeat beatae fugit aut
-                        nihil. Porro architecto laboriosam nulla? Numquam
-                        repellat maxime sapiente obcaecati repellendus delectus
-                        blanditiis eum, porro magni, dolorem doloribus. In
-                        neque, ipsam consectetur blanditiis facilis ut quo
-                        maiores fugit minima eligendi sed odit, sunt, quisquam
-                        vero. Nihil, minima cupiditate maxime error id labore
-                        impedit reiciendis, tenetur quibusdam dicta, mollitia
-                        repellat suscipit rem.
-                    </p>
-                </Paragraph>
-                <Paragraph header="Block Diagram:"></Paragraph>
-                <Paragraph header="Video Demonstration:"></Paragraph>
-                <div className="cardGrid">
-                    <PartCard name="STM32L476RG" image={Stm32}>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Quas, atque!
-                            </li>
-                            <li>
-                                Deleniti dolores reprehenderit blanditiis
-                                incidunt porro cum. Deleniti, provident facilis?
-                            </li>
-                            <li>
-                                Non, fugiat temporibus ut animi sunt ab minus
-                                magni maiores.
-                            </li>
-                        </ul>
-                    </PartCard>
-                    <PartCard name="Microphone" image={Microphone}>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Quas, atque!
-                            </li>
-                            <li>
-                                Deleniti dolores reprehenderit blanditiis
-                                incidunt porro cum. Deleniti, provident facilis?
-                            </li>
-                            <li>
-                                Non, fugiat temporibus ut animi sunt ab minus
-                                magni maiores.
-                            </li>
-                        </ul>
-                    </PartCard>
-                    <PartCard name="Bluetooth" image={Bluetooth}>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Quas, atque!
-                            </li>
-                            <li>
-                                Deleniti dolores reprehenderit blanditiis
-                                incidunt porro cum. Deleniti, provident facilis?
-                            </li>
-                            <li>
-                                Non, fugiat temporibus ut animi sunt ab minus
-                                magni maiores.
-                            </li>
-                        </ul>
-                    </PartCard>
-                    <PartCard name="Speaker" image={Speaker}>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Quas, atque!
-                            </li>
-                            <li>
-                                Deleniti dolores reprehenderit blanditiis
-                                incidunt porro cum. Deleniti, provident facilis?
-                            </li>
-                            <li>
-                                Non, fugiat temporibus ut animi sunt ab minus
-                                magni maiores.
-                            </li>
-                        </ul>
-                    </PartCard>
-                    <PartCard name="LCD" image={LCD}>
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Quas, atque!
-                            </li>
-                            <li>
-                                Deleniti dolores reprehenderit blanditiis
-                                incidunt porro cum. Deleniti, provident facilis?
-                            </li>
-                            <li>
-                                Non, fugiat temporibus ut animi sunt ab minus
-                                magni maiores.
-                            </li>
-                        </ul>
-                    </PartCard>
+                <div className="TabBar">
+                    <div
+                        className={toggleState === 1 ? "Tab Active-Tab" : "Tab"}
+                        onClick={() => toggleTab(1)}
+                    >
+                        <h2 className="Name">Home</h2>
+                    </div>
+                    <div
+                        className={toggleState === 2 ? "Tab Active-Tab" : "Tab"}
+                        onClick={() => toggleTab(2)}
+                    >
+                        <h2 className="Name">Parts</h2>
+                    </div>
+                    <div
+                        className={toggleState === 3 ? "Tab Active-Tab" : "Tab"}
+                        onClick={() => toggleTab(3)}
+                    >
+                        <h2 className="Name">Updates</h2>
+                    </div>
                 </div>
-                <Timeline header="Week 1">
-                    <ul>
-                        <li>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Aliquid error, omnis quae ad fugit et eum
-                            architecto dolor nulla veritatis ipsam recusandae
-                            asperiores. Amet, optio! Maxime dolor qui commodi
-                            nostrum necessitatibus. Vel similique unde quasi
-                            sint eaque! Aliquid eveniet praesentium magni
-                            dolorum quam nemo vel enim voluptatibus, nobis quod
-                            ad.
-                        </li>
-                        <li>
-                            Repellendus placeat, praesentium nam ex odio culpa
-                            est magnam aut dolor suscipit, totam iure, cum
-                            maxime labore dolorum nulla ipsum eligendi deleniti
-                            fuga. Rerum quae numquam libero blanditiis pariatur
-                            animi rem veritatis, nobis dicta provident nisi
-                            totam tempore impedit atque inventore error dolorum?
-                            Rerum, id et ipsam odio quia facilis.
-                        </li>
-                        <li>
-                            Minus quaerat voluptatem fugit inventore in
-                            voluptates praesentium consectetur. Ratione non
-                            magni in impedit aliquam alias enim, molestias
-                            voluptate, libero adipisci assumenda, quos ex
-                            excepturi voluptatibus voluptatem! Unde, fuga
-                            possimus molestias mollitia repellat, eaque expedita
-                            omnis temporibus, dolores delectus ipsam. Officia
-                            atque ducimus provident! Accusamus ratione
-                            exercitationem laborum rerum esse.
-                        </li>
-                        <li>
-                            Repudiandae nulla ducimus, obcaecati blanditiis,
-                            dignissimos commodi aliquam, iure tempora recusandae
-                            quas exercitationem nisi quibusdam eum repellat nemo
-                            porro dolor consequuntur mollitia sapiente odio
-                            ullam! Animi non unde, corporis placeat ratione
-                            cupiditate. Beatae eligendi, accusamus aut numquam
-                            id enim earum molestiae delectus illum debitis rem
-                            explicabo dolorem vel quasi sapiente!
-                        </li>
-                        <li>
-                            Rem asperiores id dolor ea placeat ullam facere?
-                            Nihil, porro corrupti explicabo nesciunt, esse
-                            asperiores eos commodi sequi repellat ut tempore?
-                            Earum non error ad reprehenderit culpa dignissimos
-                            tempore veniam perferendis repudiandae tenetur
-                            aliquid quaerat voluptatibus impedit, ipsum ipsam
-                            provident dolore nam quibusdam expedita dolores
-                            dolorem cupiditate temporibus? Minus, repellendus!
-                        </li>
-                    </ul>
-                </Timeline>
-                <Timeline header="Week 2">
-                    <ul>
-                        <li>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Aliquid error, omnis quae ad fugit et eum
-                            architecto dolor nulla veritatis ipsam recusandae
-                            asperiores. Amet, optio! Maxime dolor qui commodi
-                            nostrum necessitatibus. Vel similique unde quasi
-                            sint eaque! Aliquid eveniet praesentium magni
-                            dolorum quam nemo vel enim voluptatibus, nobis quod
-                            ad.
-                        </li>
-                        <li>
-                            Repellendus placeat, praesentium nam ex odio culpa
-                            est magnam aut dolor suscipit, totam iure, cum
-                            maxime labore dolorum nulla ipsum eligendi deleniti
-                            fuga. Rerum quae numquam libero blanditiis pariatur
-                            animi rem veritatis, nobis dicta provident nisi
-                            totam tempore impedit atque inventore error dolorum?
-                            Rerum, id et ipsam odio quia facilis.
-                        </li>
-                        <li>
-                            Minus quaerat voluptatem fugit inventore in
-                            voluptates praesentium consectetur. Ratione non
-                            magni in impedit aliquam alias enim, molestias
-                            voluptate, libero adipisci assumenda, quos ex
-                            excepturi voluptatibus voluptatem! Unde, fuga
-                            possimus molestias mollitia repellat, eaque expedita
-                            omnis temporibus, dolores delectus ipsam. Officia
-                            atque ducimus provident! Accusamus ratione
-                            exercitationem laborum rerum esse.
-                        </li>
-                        <li>
-                            Repudiandae nulla ducimus, obcaecati blanditiis,
-                            dignissimos commodi aliquam, iure tempora recusandae
-                            quas exercitationem nisi quibusdam eum repellat nemo
-                            porro dolor consequuntur mollitia sapiente odio
-                            ullam! Animi non unde, corporis placeat ratione
-                            cupiditate. Beatae eligendi, accusamus aut numquam
-                            id enim earum molestiae delectus illum debitis rem
-                            explicabo dolorem vel quasi sapiente!
-                        </li>
-                        <li>
-                            Rem asperiores id dolor ea placeat ullam facere?
-                            Nihil, porro corrupti explicabo nesciunt, esse
-                            asperiores eos commodi sequi repellat ut tempore?
-                            Earum non error ad reprehenderit culpa dignissimos
-                            tempore veniam perferendis repudiandae tenetur
-                            aliquid quaerat voluptatibus impedit, ipsum ipsam
-                            provident dolore nam quibusdam expedita dolores
-                            dolorem cupiditate temporibus? Minus, repellendus!
-                        </li>
-                    </ul>
-                </Timeline>
+                <div
+                    className={
+                        toggleState === 1 ? "content active-content" : "content"
+                    }
+                >
+                    <Paragraph header="Purpose:">
+                        <p>
+                            The Snore Detector and Corrector’s purpose is to
+                            detect your roommate’s snoring and provide the user
+                            with the options to correct this behavior, in the
+                            form of flashing lights, loud noises, or both. The
+                            user may activate snore countermeasures through
+                            their phone, promptly waking the offender and
+                            ideally reducing snoring through any means
+                            necessary. It will also be able to auto-detect and
+                            suppress snoring using an onboard microphone.
+                        </p>
+                    </Paragraph>
+                    <Paragraph
+                        header="Block Diagram:"
+                        image={BlockDiagram}
+                    ></Paragraph>
+                    <Paragraph header="Video Demonstration:">
+                        <i>-Coming Soon-</i>
+                    </Paragraph>
+                </div>
+                <div
+                    className={
+                        toggleState === 2 ? "content active-content" : "content"
+                    }
+                >
+                    <div className="Parts">
+                        <PartCard name="STM32L476RG" image={Stm32}>
+                            <ul>
+                                <li>
+                                    <a href="https://www.digikey.com/en/products/detail/stmicroelectronics/NUCLEO-L476RG/5347711">
+                                        STM32L476RG on Digi-key
+                                    </a>
+                                </li>
+                                <li>
+                                    Used as the controller for all the
+                                    peripherals
+                                </li>
+                            </ul>
+                        </PartCard>
+                        <PartCard name="I2S MEMS Microphone" image={Microphone}>
+                            <ul>
+                                <li>
+                                    <a href="https://www.adafruit.com/product/3421">
+                                        I2S MEMS Microphone on Adafruit
+                                    </a>
+                                </li>
+                                <li>Uses I2s Communication standard</li>
+                                <li>
+                                    Used to detect roommate’s obnoxious snoring
+                                </li>
+                            </ul>
+                        </PartCard>
+                        <PartCard name="HC-05 Bluetooth Chip" image={Bluetooth}>
+                            <ul>
+                                <li>
+                                    <a href="https://www.amazon.com/HiLetgo-Wireless-Bluetooth-Transceiver-Arduino/dp/B071YJG8DR/ref=sr_1_5?keywords=bluetooth+hc-05&qid=1677716575&sr=8-5">
+                                        HC-05 Bluetooth Chip on Amazon
+                                    </a>
+                                </li>
+                                <li>Uses UART communication standard</li>
+                                <li>Interaces with termite</li>
+                                <li>
+                                    Allows for remote control of the snoring
+                                    intervention devices
+                                </li>
+                            </ul>
+                        </PartCard>
+                        <PartCard name="Speaker" image={Speaker}>
+                            <ul>
+                                <li>TBA</li>
+                            </ul>
+                        </PartCard>
+                        <PartCard name="2.8 TFT SPI 240X320 V1.2" image={LCD}>
+                            <ul>
+                                <li>
+                                    <a href="https://protosupplies.com/product/tft-lcd-2-8-240x320-rgb-spi-display-with-touchscreen/">
+                                        2.8 TFT SPI 240X320 V1.2 on
+                                        Protosupplies
+                                    </a>
+                                </li>
+                                <li>Uses SPI communications standard</li>
+                                <li>
+                                    Used to project agitating light into
+                                    roommate’s eyes
+                                </li>
+                            </ul>
+                        </PartCard>
+                    </div>
+                </div>
+                <div
+                    className={
+                        toggleState === 3 ? "content active-content" : "content"
+                    }
+                >
+                    <Timeline header="Week 1">
+                        <ul>
+                            <li>Created a project and defined its purpose</li>
+                            <li>
+                                Designed and implemented the project site using
+                                Github pages with React
+                            </li>
+                            <li>Created the block diagram for the project</li>
+                            <li>
+                                Researched and selected parts for the project
+                            </li>
+                            <li>
+                                Determined what communications standard to use.
+                                For this project we chose SPI, I2S, and UART
+                            </li>
+                        </ul>
+                    </Timeline>
+                    <Timeline header="Week 2">
+                        <ul>
+                            <li>TBA</li>
+                        </ul>
+                    </Timeline>
+                </div>
             </Content>
         </div>
     );

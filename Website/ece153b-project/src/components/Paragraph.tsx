@@ -5,6 +5,7 @@ function Paragraph(props: any) {
     return (
         <div className="Paragraph">
             <h3>{props.header}</h3>
+            <img src={props.image} alt="" />
             {props.children}
         </div>
     );
