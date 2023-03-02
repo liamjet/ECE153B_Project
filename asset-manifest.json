@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/ECE153B_Project/static/css/main.2657b53e.css",
-    "main.js": "/ECE153B_Project/static/js/main.1c5b9a9c.js",
+    "main.css": "/ECE153B_Project/static/css/main.8b9f0ac9.css",
+    "main.js": "/ECE153B_Project/static/js/main.1c0ce71b.js",
     "static/js/787.747972bf.chunk.js": "/ECE153B_Project/static/js/787.747972bf.chunk.js",
     "static/media/background.png": "/ECE153B_Project/static/media/background.eded79b908fd44ca4253.png",
     "static/media/Stm32.png": "/ECE153B_Project/static/media/Stm32.ad2fb58cd4b4ca5ef0b7.png",
-    "static/media/Microphone.jpeg": "/ECE153B_Project/static/media/Microphone.3403264eb82a79da87bc.jpeg",
+    "static/media/Microphone.jpeg": "/ECE153B_Project/static/media/Microphone.7918be41ac7bab9a4273.jpeg",
     "static/media/Bluetooth.jpg": "/ECE153B_Project/static/media/Bluetooth.ad9c0f6731ebc48944c0.jpg",
-    "static/media/LCD.jpeg": "/ECE153B_Project/static/media/LCD.afe63a4eed8354e0ca93.jpeg",
     "static/media/Speaker.jpeg": "/ECE153B_Project/static/media/Speaker.25ebb23979446c278215.jpeg",
+    "static/media/Block-Diagram.png": "/ECE153B_Project/static/media/Block-Diagram.2cf9347e1d567e022d24.png",
+    "static/media/LCD.jpeg": "/ECE153B_Project/static/media/LCD.26068c29f60b28355a11.jpeg",
     "index.html": "/ECE153B_Project/index.html",
-    "main.2657b53e.css.map": "/ECE153B_Project/static/css/main.2657b53e.css.map",
-    "main.1c5b9a9c.js.map": "/ECE153B_Project/static/js/main.1c5b9a9c.js.map",
+    "main.8b9f0ac9.css.map": "/ECE153B_Project/static/css/main.8b9f0ac9.css.map",
+    "main.1c0ce71b.js.map": "/ECE153B_Project/static/js/main.1c0ce71b.js.map",
     "787.747972bf.chunk.js.map": "/ECE153B_Project/static/js/787.747972bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2657b53e.css",
-    "static/js/main.1c5b9a9c.js"
+    "static/css/main.8b9f0ac9.css",
+    "static/js/main.1c0ce71b.js"
   ]
 }
