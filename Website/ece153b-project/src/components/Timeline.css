@@ -1,9 +1,9 @@
 .Timeline {
-    max-width: 880px;
     display: grid;
     grid-template-columns: 30px auto;
     grid-template-rows: 30px auto;
     grid-column-gap: 20px;
+    width: 100%;
 }
 .barStart {
     border-radius: 30px;

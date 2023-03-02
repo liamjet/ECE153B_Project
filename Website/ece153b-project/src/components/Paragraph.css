@@ -1,6 +1,10 @@
 .Paragraph {
-    max-width: 880px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.Paragraph img {
+    max-width: 500px;
     width: 100%;
 }

@@ -1,6 +1,7 @@
 .PartCard {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    height: 500px;
 }
 .description {
     padding: 10px;
