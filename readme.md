@@ -24,6 +24,10 @@ The Adafruit I2S MEMS Microphone is a pure digital microphone which can be inter
 ### Adafruit I2C Stereo 2.8W Class D Audio Amplifier (SUBJECT TO CHANGE) <br>
 [Amazon](https://www.amazon.com/Stereo-2-8W-Class-Audio-Amplifier/dp/B096YFBBFF) <br>
 
+### uxcell a15080600ux0275 Metal Shell Round Internal Magnet Speaker 2W 8 Ohm
+[Amazon](https://www.amazon.com/Uxcell-a15080600ux0275-Internal-Magnet-Speaker/dp/B0177ABRQ6/ref=sr_1_3?keywords=8+ohm+speaker&qid=1678050488&sr=8-3#customerReviews) <br>
+[Guide](https://www.adafruit.com/product/1712)
+
 ## Block Diagram
 <img width="500" alt="Picture1" src="https://user-images.githubusercontent.com/61168583/221713957-f15b9de0-710e-4668-9106-0fa8c4420742.png">
 
