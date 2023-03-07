@@ -9,6 +9,7 @@ import Timeline from "./components/Timeline";
 import Stm32 from "./resources/Stm32.png";
 import Bluetooth from "./resources/Bluetooth.jpg";
 import LCD from "./resources/LCD.jpeg";
+import AMP from "./resources/Amp.jpg";
 import Speaker from "./resources/Speaker.jpg";
 import Microphone from "./resources/Microphone.jpeg";
 import BlockDiagram from "./resources/Block-Diagram.png";
@@ -133,12 +134,26 @@ function App() {
                         </PartCard>
                         <PartCard
                             name="Adafruit I2C Stereo 2.8W Class D Audio Amplifier (SUBJECT TO CHANGE)"
-                            image={Speaker}
+                            image={AMP}
                             link="https://www.amazon.com/Stereo-2-8W-Class-Audio-Amplifier/dp/B096YFBBFF"
                         >
                             <ul>
                                 <li>Uses I2C communication standard</li>
-                                <li>Used to correct snoring</li>
+                                <li>
+                                    Amplifies the signal sent to the speaker
+                                </li>
+                            </ul>
+                        </PartCard>
+                        <PartCard
+                            name="uxcell Metal Shell Round Internal Magnet Speaker"
+                            image={Speaker}
+                            link="https://www.amazon.com/Uxcell-a15080600ux0275-Internal-Magnet-Speaker/dp/B0177ABRQ6/ref=sr_1_3?keywords=8+ohm+speaker&qid=1678050488&sr=8-3#customerReviews"
+                        >
+                            <ul>
+                                <li>
+                                    Used to play a sound to wake the roommate’s
+                                    eyes
+                                </li>
                             </ul>
                         </PartCard>
                         <PartCard
