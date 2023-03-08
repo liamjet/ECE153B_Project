@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ECE153B_Project/static/css/main.4565c8bc.css",
-    "main.js": "/ECE153B_Project/static/js/main.7568d80b.js",
+    "main.css": "/ECE153B_Project/static/css/main.1ffe97f6.css",
+    "main.js": "/ECE153B_Project/static/js/main.975234d5.js",
     "static/js/787.747972bf.chunk.js": "/ECE153B_Project/static/js/787.747972bf.chunk.js",
     "static/media/background.png": "/ECE153B_Project/static/media/background.eded79b908fd44ca4253.png",
     "static/media/Stm32.png": "/ECE153B_Project/static/media/Stm32.ad2fb58cd4b4ca5ef0b7.png",
@@ -11,13 +11,14 @@
     "static/media/Amp.jpg": "/ECE153B_Project/static/media/Amp.57f1b809a44bb61b700f.jpg",
     "static/media/LCD.jpeg": "/ECE153B_Project/static/media/LCD.26068c29f60b28355a11.jpeg",
     "static/media/Speaker.jpg": "/ECE153B_Project/static/media/Speaker.62cc5e8fa8d8867d6f51.jpg",
+    "static/media/goto.webp": "/ECE153B_Project/static/media/goto.8d1b6cee229f5ce2fd57.webp",
     "index.html": "/ECE153B_Project/index.html",
-    "main.4565c8bc.css.map": "/ECE153B_Project/static/css/main.4565c8bc.css.map",
-    "main.7568d80b.js.map": "/ECE153B_Project/static/js/main.7568d80b.js.map",
+    "main.1ffe97f6.css.map": "/ECE153B_Project/static/css/main.1ffe97f6.css.map",
+    "main.975234d5.js.map": "/ECE153B_Project/static/js/main.975234d5.js.map",
     "787.747972bf.chunk.js.map": "/ECE153B_Project/static/js/787.747972bf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4565c8bc.css",
-    "static/js/main.7568d80b.js"
+    "static/css/main.1ffe97f6.css",
+    "static/js/main.975234d5.js"
   ]
 }
