@@ -1,5 +1,6 @@
 import React from "react";
 import "./PartCard.css";
+import Goto from "../resources/goto.webp";
 
 function PartCard(props: any) {
     return (
@@ -8,7 +9,9 @@ function PartCard(props: any) {
                 <div
                     className="image"
                     style={{ backgroundImage: `url(${props.image})` }}
-                ></div>
+                >
+                    <img className="GotoIcon" src={Goto} alt="" />
+                </div>
             </a>
             <div className="description">
                 <h3>{props.name}</h3>

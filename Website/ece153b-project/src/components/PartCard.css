@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     height: 500px;
+    max-width: 345px;
 }
 .description {
     padding: 10px;
@@ -29,4 +30,20 @@
 
 .PartLink {
     display: block;
+}
+
+.GotoIcon {
+    width: 12px;
+    position: relative;
+    left: 90%;
+    top: 5%;
+    background-color: rgba(226, 226, 226, 0.7);
+    padding: 5px 5px 6px 6px;
+    border-radius: 3px;
+}
+
+@media (max-width: 800px) {
+    .PartCard {
+        height: 400px;
+    }
 }
