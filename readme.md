@@ -42,3 +42,6 @@ Software setup <br>
 Testing <br>
 Demonstration/Presentation <br>
 
+## Website
+[Website](https://liamjet.github.io/ECE153B_Project/)
+
