@@ -195,7 +195,15 @@ function App() {
                     </Timeline>
                     <Timeline header="Week 2">
                         <ul>
-                            <li>TBA</li>
+                            <li>Deployed numerous changes to the website</li>
+                            <li>
+                                Finalized the parts list and ordered all of the
+                                parts
+                            </li>
+                            <li>
+                                Implemented the fundamentals of the code for the
+                                project
+                            </li>
                         </ul>
                     </Timeline>
                     <Timeline header="Week 3">
