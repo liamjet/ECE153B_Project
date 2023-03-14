@@ -1,6 +1,8 @@
 # ECE 153B Final Project: Snore Detector and Corrector
 by Liam Pang-Naylor and Jacob Eisner
 
+[Website](https://liamjet.github.io/ECE153B_Project/) <br>
+
 ## Overview/Goal/Purpose
 
 The Snore Detector and Corrector will detect the user's roommate’s snoring and provide the user with the necessary options to correct this behavior, in the form of flashing lights, loud noises, or both. The user may activate snore countermeasures through their phone, promptly waking the offender and ideally reducing snoring through any means necessary. It will also be able to auto-detect and suppress snoring using an onboard microphone and automatic snore countermeasures.
@@ -18,6 +20,8 @@ The Snore Detector and Corrector will detect the user's roommate’s snoring and
 ### Adafruit I2S MEMS Microphone <br>
 [Amazon](https://www.amazon.com/Adafruit-I2S-MEMS-Microphone-Breakout/dp/B06XNL2GBW) <br>
 [Guide](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout/) <br>
+[STM Guide](https://www.youtube.com/watch?v=z25zckhHzC8) <br>
+[Medium Guide](https://medium.com/@davidramsay/how-to-get-i2s-working-on-an-stm32-mcu-33de0e9c9ff8) <br>
 
 The Adafruit I2S MEMS Microphone is a pure digital microphone which can be interfaced to the STM board by using a SPI block as I2S. The STM board has seven SPI blocks so there will be no compatibility issues with the SPI Display.
 
