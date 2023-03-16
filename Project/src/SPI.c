@@ -90,26 +90,35 @@ void SPI_Init(void){
 
 
 void SPI_Write(SPI_TypeDef * SPIx, uint8_t *txBuffer, uint8_t * rxBuffer, int size) {
+    for (int i = 0; i < size; i++) {
 
-	//Set up SPI TX
-	while ((SPIx->SR & SPI_SR_TXE) != SPI_SR_TXE);
+        while (!(SPIx->SR & SPI_SR_TXE)); // Wait until TX buffer is empty
+        *(uint8_t *)&SPIx->DR = txBuffer[i]; // Write data to be transmitted to the SPI data register
 
-	// TODO
-	
-	// [5c] Wait for the Busy to become unset for the transmission to complete.
-	// [DONE]
-	while ((SPIx->SR & SPI_SR_BSY) == SPI_SR_BSY);
-	
+        while (!(SPIx->SR & SPI_SR_RXNE)); // Wait until RX buffer is not empty
+        rxBuffer[i] = *(uint8_t *)&SPIx->DR; // Read received data from SPI data register
+
+        SPI_Delay(100); // Delay for 100 microseconds
+    }
 }
 
 void SPI_Read(SPI_TypeDef * SPIx, uint8_t *rxBuffer, int size) {
-	//Set up SPI RX
+    for (int i = 0; i < size; i++) {
+
+        while (!(SPIx->SR & SPI_SR_TXE)); // Wait until TX buffer is empty
+        *(uint8_t *)&SPIx->DR = 0xFF; // Send dummy byte to generate clock for reading data
+
+        while (!(SPIx->SR & SPI_SR_RXNE)); // Wait until RX buffer is not empty
+        rxBuffer[i] = *(uint8_t *)&SPIx->DR; // Read received data from SPI data register
+		
+        SPI_Delay(100); // Delay for 100 microseconds
+    }
 }
 
+
+//Where do we use this
 //Incorporate delay function (same as delay() in previous labs but with us)
 void SPI_Delay(uint32_t us) {
-	uint32_t currentTicks = msTicks; // Hint: It may be helpful to keep track of what the current tick count is
-	
-	// [DONE] - Implement function that waits until a time specified by argument T
-	while (msTicks - currentTicks <= us);
+	uint32_t time = 100*us/7;    
+	while(--time);  
 }
