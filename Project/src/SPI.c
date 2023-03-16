@@ -76,8 +76,8 @@ void SPI_Init(void){
 	SPI1->CR2 |= SPI_CR2_NSSP;
 
 	// Manage NSS using Software
-	// [TODO]
-	
+	// [FIXME]
+	SPI1->CR1 |= SPI_CR1_SSI;
 	
 	// Set FIFO Reception Threshold
 	// [DONE]
@@ -110,7 +110,7 @@ void SPI_Read(SPI_TypeDef * SPIx, uint8_t *rxBuffer, int size) {
 
         while (!(SPIx->SR & SPI_SR_RXNE)); // Wait until RX buffer is not empty
         rxBuffer[i] = *(uint8_t *)&SPIx->DR; // Read received data from SPI data register
-		
+
         SPI_Delay(100); // Delay for 100 microseconds
     }
 }
