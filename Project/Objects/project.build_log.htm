@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Liam Pang-Naylor, UCSB, LIC=----
+License Information: Pablo Landriz, University of California, Santa Barbara, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.38.0.0
@@ -21,55 +21,69 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\liamj\OneDrive\Documents\GitHub\ECE153B_Lab5\L5A\project 1.uvprojx
-Project File Date:  02/24/2023
+C:\Users\jeisner\Documents\GitHub\ECE153B_Project\Project\project.uvprojx
+Project File Date:  03/16/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'Target 1'
-assembling startup_stm32l476xx.s...
-src/SysClock.c(1): warning: In file included from...
-src/SysClock.h(4): warning: In file included from...
-src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-  *           - Macros to access peripheral<92>s registers hardware
-                                           ^
-src/SysClock.c(20): warning: no newline at end of file [-Wnewline-eof]
-}
- ^
-2 warnings generated.
-compiling SysClock.c...
-src/ADC.c(1): warning: In file included from...
-src/ADC.h(4): warning: In file included from...
-src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-  *           - Macros to access peripheral<92>s registers hardware
-                                           ^
-src/ADC.c(32): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
-void ADC_Common_Configuration() {
-                             ^
-                              void
-2 warnings generated.
-compiling ADC.c...
-src/PWM.c(1): warning: In file included from...
-src/PWM.h(4): warning: In file included from...
-src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-  *           - Macros to access peripheral<92>s registers hardware
-                                           ^
-1 warning generated.
-compiling PWM.c...
+Build target 'Target 1'
 src/main.c(10): warning: In file included from...
-src/ADC.h(4): warning: In file included from...
 src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *           - Macros to access peripheral<92>s registers hardware
                                            ^
-src/main.c(25): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-                uint32_t read_data;
-                         ^
-2 warnings generated.
+src/main.c(11): warning: In file included from...
+src/Motor.h(20): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+src/main.c(12): warning: In file included from...
+src/SysTimer.h(19): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+src/main.c(14): warning: In file included from...
+src/UART.h(22): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+src/main.c(16): warning: In file included from...
+src/MY_ILI9341.h(19): warning: In file included from...
+C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include\stm32l4xx.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e.
+                                               ^
+C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include\stm32l4xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers
+                                                                    ^
+src/main.c(16): warning: In file included from...
+src/MY_ILI9341.h(19): warning: In file included from...
+C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include\stm32l4xx.h(150): warning: In file included from...
+C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h(10): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+src/main.c(16): warning: In file included from...
+src/MY_ILI9341.h(147): warning: no newline at end of file [-Wnewline-eof]
+uint8_t ILI9341_getRotation(void);
+                                  ^
+src/main.c(23): warning: no previous prototype for function 'Init_USARTx' [-Wmissing-prototypes]
+void Init_USARTx(int x) {
+     ^
+src/main.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Init_USARTx(int x) {
+^
+static 
+src/main.c(48): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        volatile char rxByte = 'z';
+                      ^
+src/main.c(16): warning: In file included from...
+src/MY_ILI9341.h(129): warning: unused function 'drawCircleHelper' [-Wunused-function]
+static void drawCircleHelper( int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color);
+            ^
+src/MY_ILI9341.h(130): warning: unused function 'fillCircleHelper' [-Wunused-function]
+static void fillCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, int16_t delta, uint16_t color);
+            ^
+12 warnings generated.
 compiling main.c...
 linking...
-Program Size: Code=1244 RO-data=408 RW-data=0 ZI-data=1632  
+Program Size: Code=18216 RO-data=1104 RW-data=4 ZI-data=1836  
 FromELF: creating hex file...
-".\Objects\project.axf" - 0 Error(s), 7 Warning(s).
+".\Objects\project.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -86,13 +100,13 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_Target_1
-  C:/Users/liamj/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/liamj/AppData/Local/Arm/Packs/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include
+  C:/Keil_v5/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.6.0
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

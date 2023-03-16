@@ -400,16 +400,6 @@
               <FilePath>.\src\stm32l476xx.h</FilePath>
             </File>
             <File>
-              <FileName>LED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\LED.c</FilePath>
-            </File>
-            <File>
-              <FileName>LED.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\LED.h</FilePath>
-            </File>
-            <File>
               <FileName>SPI.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\SPI.c</FilePath>
@@ -418,16 +408,6 @@
               <FileName>SPI.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\src\SPI.h</FilePath>
-            </File>
-            <File>
-              <FileName>SysClock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\SysClock.c</FilePath>
-            </File>
-            <File>
-              <FileName>SysClock.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\src\SysClock.h</FilePath>
             </File>
             <File>
               <FileName>SysTimer.c</FileName>
@@ -450,9 +430,39 @@
               <FilePath>.\src\UART.h</FilePath>
             </File>
             <File>
+              <FileName>Motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\Motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>Motor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\Motor.h</FilePath>
+            </File>
+            <File>
               <FileName>UART_printf.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src\UART_printf.c</FilePath>
+            </File>
+            <File>
+              <FileName>SysClock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\SysClock.c</FilePath>
+            </File>
+            <File>
+              <FileName>SysClock.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\SysClock.h</FilePath>
+            </File>
+            <File>
+              <FileName>MY_ILI9341.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\MY_ILI9341.c</FilePath>
+            </File>
+            <File>
+              <FileName>MY_ILI9341.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\MY_ILI9341.h</FilePath>
             </File>
           </Files>
         </Group>

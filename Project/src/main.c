@@ -8,9 +8,12 @@
 
 
 #include "stm32l476xx.h"
-#include "LED.h"
+#include "Motor.h"
+#include "SysTimer.h"
 #include "SysClock.h"
 #include "UART.h"
+#include "SPI.h"
+#include "MY_ILI9341.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -32,28 +35,50 @@ void Init_USARTx(int x) {
 }
 
 int main(void) {
-
-	System_Clock_Init(); // Switch System Clock = 80 MHz
-	LED_Init();
-
-	// Initialize UART -- change the argument depending on the part you are working on
+	GPIO_Init();
+	SysTick_Init();
+ 	SysTick_Handler();
 	Init_USARTx(1);
+	SPI2_GPIO_Init();
+	SPI_Init();
+	System_Clock_Init();
+	ILI9341_Init(SPI2, GPIOB, 11, GPIOB, 10, GPIOB, 12);
+	ILI9341_Fill(COLOR_BLACK);
 	
-	volatile char rxByte = 'a';
+	volatile char rxByte = 'z';
 	while(1) {
 		// [TODO]
-		printf("Gimme an input:\n");
+		printf("Snoring roommate? Type [s] to spray them, [b] blind them, or [a] for all:\n");
 		scanf("%c",&rxByte);
-		if (rxByte == 'y' || rxByte == 'Y') {
-			Green_LED_On();
-			printf("Green LED on\n");
+		if (rxByte == 's' || rxByte == 'S') {
+				Full_Stepping_Clockwise();
 		}
-		else if (rxByte == 'n' || rxByte == 'N') {
-			Green_LED_Off();
-			printf("Green LED off\n");
+		else if (rxByte == 'b' || rxByte == 'B') {
+				for (int i = 0; i < 5; i++) {
+				ILI9341_Fill(COLOR_CYAN);
+				delay(2500);
+				ILI9341_Fill(COLOR_YELLOW);
+				delay(2500);
+			}
+				ILI9341_Fill(COLOR_BLACK);
+		}
+		else if (rxByte == 'a' || rxByte == 'A') {
+			Full_Stepping_Clockwise();
+			for (int i = 0; i < 5; i++) {
+				ILI9341_Fill(COLOR_CYAN);
+				delay(2500);
+				ILI9341_Fill(COLOR_YELLOW);
+				delay(2500);
+			}
+			ILI9341_Fill(COLOR_BLACK);
+			
 		}
 		else {
 			printf("Invald input, please try again.");
 		}
 	}
+	
+
+	
+	
 }
