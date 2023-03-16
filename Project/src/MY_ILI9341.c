@@ -290,7 +290,8 @@ const unsigned char font1[] = {
 };
 
 void SPI_Transmit(SPI_TypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout){
-	//Implement SPI TX function here	
+	//Implement SPI TX function here
+		SPI_Write(hspi, pData, Size);
 }
 
 //***** Functions prototypes *****//
@@ -304,7 +305,7 @@ void ILI9341_SendCommand(uint8_t com)
 	//Put CS LOW
 	tftCS_GPIO->ODR &= ~(1 << tftCS_PIN);
 	//Write command byte using SPI
-	lcdSPIhandle = SPI1;
+	SPI_Transmit(SPI2, &tmpCmd, 1, 0);
 	//Bring CS HIGH
 	tftCS_GPIO->ODR |= (1 << tftCS_PIN);
 }
@@ -319,7 +320,7 @@ void ILI9341_SendData(uint8_t data)
 	//Put CS LOW
 	tftCS_GPIO->ODR &= ~(1 << tftCS_PIN);
 	//Write data using SPI
-	lcdSPIhandle = data;
+	SPI_Transmit(SPI2, &tmpCmd, 1, 0);
 	//Bring CS HIGH
 	tftCS_GPIO->ODR |= (1 << tftCS_PIN);
 }
@@ -332,8 +333,7 @@ void ILI9341_SendData_Multi(uint16_t Colordata, uint32_t size)
 	//Put CS LOW
 	tftCS_GPIO->ODR &= ~(1 << tftCS_PIN);
 	//Write data using SPI
-	lcdSPIhandle = Colordata;
-	//Wait for end of DMA transfer
+	SPI_Transmit(SPI2, (uint8_t*)&Colordata, 2, 0);
 	
 	//Bring CS HIGH
 	tftCS_GPIO->ODR |= (1 << tftCS_PIN);
@@ -365,17 +365,26 @@ void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPI
 	lcdSPIhandle = spiLcdHandle;
 	//set CS pin variable (look at global variables at the top of the file)
 	tftCS_PIN = csPIN;
+	tftCS_GPIO = csPORT;
 	//set DC pin variable
 	tftDC_PIN = dcPIN;
+	tftDC_GPIO = dcPORT;
 	//set RESET pin variable
 	tftRESET_PIN = resetPIN;
+	tftRESET_GPIO = resetPORT;
 	//clear the mode register bits
-	
+	tftCS_GPIO->MODER &= ~(3 << (tftCS_PIN * 2));
+	tftDC_GPIO->MODER &= ~(3 << (tftDC_PIN * 2));
+	tftRESET_GPIO->MODER &= ~(3 << (tftRESET_PIN * 2));
 	//set pins to output mode
-	
+	tftCS_GPIO->MODER |= (1 << tftCS_PIN*2);
+	tftDC_GPIO->MODER |= (1 << tftDC_PIN*2);
+	tftRESET_GPIO->MODER |= (1 << tftRESET_PIN*2);
 	
 
 	//Turn LCD on by turning off the reset (check whether reset is active high)
+		 tftRESET_GPIO->ODR |= (1 << tftRESET_PIN);
+	 
 	 
    ILI9341_SendCommand (ILI9341_RESET); // software reset comand
    SPI_Delay(100);

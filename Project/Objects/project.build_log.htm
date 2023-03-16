@@ -21,55 +21,29 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\lpang-naylor\Documents\GitHub\ECE153B_Project\Project\project.uvprojx
-Project File Date:  03/15/2023
+C:\Users\jeisner\Documents\GitHub\ECE153B_Project\Project\project.uvprojx
+Project File Date:  03/16/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-src/SPI.c(1): warning: In file included from...
-src/SPI.h(4): warning: In file included from...
+src/main.c(10): warning: In file included from...
 src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *           - Macros to access peripheral<92>s registers hardware
                                            ^
-src/SPI.c(2): warning: In file included from...
+src/main.c(11): warning: In file included from...
+src/Motor.h(20): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+src/main.c(12): warning: In file included from...
 src/SysTimer.h(19): warning: no newline at end of file [-Wnewline-eof]
 #endif
       ^
-src/SPI.c(10): warning: no previous prototype for function 'SPI_GPIO_Init' [-Wmissing-prototypes]
-void SPI_GPIO_Init(void) {
-     ^
-src/SPI.c(10): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void SPI_GPIO_Init(void) {
-^
-static 
-src/SPI.c(92): warning: unused parameter 'txBuffer' [-Wunused-parameter]
-void SPI_Write(SPI_TypeDef * SPIx, uint8_t *txBuffer, uint8_t * rxBuffer, int size) {
-                                            ^
-src/SPI.c(92): warning: unused parameter 'rxBuffer' [-Wunused-parameter]
-void SPI_Write(SPI_TypeDef * SPIx, uint8_t *txBuffer, uint8_t * rxBuffer, int size) {
-                                                                ^
-src/SPI.c(92): warning: unused parameter 'size' [-Wunused-parameter]
-void SPI_Write(SPI_TypeDef * SPIx, uint8_t *txBuffer, uint8_t * rxBuffer, int size) {
-                                                                              ^
-src/SPI.c(105): warning: unused parameter 'SPIx' [-Wunused-parameter]
-void SPI_Read(SPI_TypeDef * SPIx, uint8_t *rxBuffer, int size) {
-                            ^
-src/SPI.c(105): warning: unused parameter 'rxBuffer' [-Wunused-parameter]
-void SPI_Read(SPI_TypeDef * SPIx, uint8_t *rxBuffer, int size) {
-                                           ^
-src/SPI.c(105): warning: unused parameter 'size' [-Wunused-parameter]
-void SPI_Read(SPI_TypeDef * SPIx, uint8_t *rxBuffer, int size) {
-                                                         ^
-src/SPI.c(111): error: use of undeclared identifier 'msTicks'
-        uint32_t currentTicks = msTicks; // Hint: It may be helpful to keep track of what the current tick count is
-                                ^
-src/SPI.c(114): error: use of undeclared identifier 'msTicks'
-        while (msTicks - currentTicks <= us);
-               ^
-9 warnings and 2 errors generated.
-compiling SPI.c...
-src/MY_ILI9341.c(17): warning: In file included from...
+src/main.c(14): warning: In file included from...
+src/UART.h(22): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+src/main.c(16): warning: In file included from...
 src/MY_ILI9341.h(19): warning: In file included from...
 C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include\stm32l4xx.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *              - To use or not the peripheral<92>s drivers in application code(i.e.
@@ -77,309 +51,39 @@ C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include\st
 C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include\stm32l4xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *                code will be based on direct access to peripheral<92>s registers
                                                                     ^
-src/MY_ILI9341.c(17): warning: In file included from...
+src/main.c(16): warning: In file included from...
 src/MY_ILI9341.h(19): warning: In file included from...
 C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include\stm32l4xx.h(150): warning: In file included from...
 C:/Keil_v5/Keil/STM32L4xx_DFP/2.6.1/Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h(10): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *           - Macros to access peripheral<92>s registers hardware
                                            ^
-src/MY_ILI9341.c(17): warning: In file included from...
+src/main.c(16): warning: In file included from...
 src/MY_ILI9341.h(147): warning: no newline at end of file [-Wnewline-eof]
 uint8_t ILI9341_getRotation(void);
                                   ^
-src/MY_ILI9341.c(18): warning: In file included from...
-src/SPI.h(4): warning: In file included from...
-src/stm32l476xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-  *           - Macros to access peripheral<92>s registers hardware
-                                           ^
-src/MY_ILI9341.c(292): warning: unused parameter 'hspi' [-Wunused-parameter]
-void SPI_Transmit(SPI_TypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout){
-                               ^
-src/MY_ILI9341.c(292): warning: unused parameter 'pData' [-Wunused-parameter]
-void SPI_Transmit(SPI_TypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout){
-                                              ^
-src/MY_ILI9341.c(292): warning: unused parameter 'Size' [-Wunused-parameter]
-void SPI_Transmit(SPI_TypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout){
-                                                              ^
-src/MY_ILI9341.c(292): warning: unused parameter 'Timeout' [-Wunused-parameter]
-void SPI_Transmit(SPI_TypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout){
-                                                                             ^
-src/MY_ILI9341.c(309): error: expected identifier
-}
+src/main.c(23): warning: no previous prototype for function 'Init_USARTx' [-Wmissing-prototypes]
+void Init_USARTx(int x) {
+     ^
+src/main.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Init_USARTx(int x) {
 ^
-src/MY_ILI9341.c(315): warning: unused variable 'tmpCmd' [-Wunused-variable]
-        uint8_t tmpCmd = data;
-                ^
-src/MY_ILI9341.c(328): warning: unused variable 'colorL' [-Wunused-variable]
-        uint8_t colorL,colorH;
-                ^
-src/MY_ILI9341.c(328): warning: unused variable 'colorH' [-Wunused-variable]
-        uint8_t colorL,colorH;
-                       ^
-src/MY_ILI9341.c(326): warning: unused parameter 'Colordata' [-Wunused-parameter]
-void ILI9341_SendData_Multi(uint16_t Colordata, uint32_t size)
-                                     ^
-src/MY_ILI9341.c(326): warning: unused parameter 'size' [-Wunused-parameter]
-void ILI9341_SendData_Multi(uint16_t Colordata, uint32_t size)
-                                                         ^
-src/MY_ILI9341.c(361): warning: unused parameter 'spiLcdHandle' [-Wunused-parameter]
-void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
-                               ^
-src/MY_ILI9341.c(361): warning: unused parameter 'csPORT' [-Wunused-parameter]
-void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
-                                                           ^
-src/MY_ILI9341.c(361): warning: unused parameter 'csPIN' [-Wunused-parameter]
-void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
-                                                                            ^
-src/MY_ILI9341.c(361): warning: unused parameter 'dcPORT' [-Wunused-parameter]
-void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
-                                                                                                 ^
-src/MY_ILI9341.c(361): warning: unused parameter 'dcPIN' [-Wunused-parameter]
-void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
-                                                                                                                  ^
-src/MY_ILI9341.c(361): warning: unused parameter 'resetPORT' [-Wunused-parameter]
-void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
-                                                                                                                                       ^
-src/MY_ILI9341.c(361): warning: unused parameter 'resetPIN' [-Wunused-parameter]
-void ILI9341_Init(SPI_TypeDef *spiLcdHandle, GPIO_TypeDef *csPORT, uint16_t csPIN, GPIO_TypeDef *dcPORT, uint16_t dcPIN, GPIO_TypeDef *resetPORT, uint16_t resetPIN)
-                                                                                                                                                           ^
-src/MY_ILI9341.c(456): warning: unused variable 'myColor' [-Wunused-variable]
-        uint16_t myColor = 0xFF;
-                 ^
-src/MY_ILI9341.c(478): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-        ILI9341_SetCursorPosition(x0, y0, x1, y1);
-        ~~~~~~~~~~~~~~~~~~~~~~~~~             ^~
-src/MY_ILI9341.c(478): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-        ILI9341_SetCursorPosition(x0, y0, x1, y1);
-        ~~~~~~~~~~~~~~~~~~~~~~~~~         ^~
-src/MY_ILI9341.c(478): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-        ILI9341_SetCursorPosition(x0, y0, x1, y1);
-        ~~~~~~~~~~~~~~~~~~~~~~~~~     ^~
-src/MY_ILI9341.c(478): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-        ILI9341_SetCursorPosition(x0, y0, x1, y1);
-        ~~~~~~~~~~~~~~~~~~~~~~~~~ ^~
-src/MY_ILI9341.c(495): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0  , y0+r, color);
-  ~~~~~~~~~~~~~~~~~       ~~^~
-src/MY_ILI9341.c(495): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0  , y0+r, color);
-  ~~~~~~~~~~~~~~~~~ ^~
-src/MY_ILI9341.c(496): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0  , y0-r, color);
-  ~~~~~~~~~~~~~~~~~       ~~^~
-src/MY_ILI9341.c(496): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0  , y0-r, color);
-  ~~~~~~~~~~~~~~~~~ ^~
-src/MY_ILI9341.c(497): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0+r, y0  , color);
-  ~~~~~~~~~~~~~~~~~       ^~
-src/MY_ILI9341.c(497): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0+r, y0  , color);
-  ~~~~~~~~~~~~~~~~~ ~~^~
-src/MY_ILI9341.c(498): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0-r, y0  , color);
-  ~~~~~~~~~~~~~~~~~       ^~
-src/MY_ILI9341.c(498): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-  ILI9341_DrawPixel(x0-r, y0  , color);
-  ~~~~~~~~~~~~~~~~~ ~~^~
-src/MY_ILI9341.c(510): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + x, y0 + y, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(510): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + x, y0 + y, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(511): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - x, y0 + y, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(511): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - x, y0 + y, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(512): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + x, y0 - y, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(512): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + x, y0 - y, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(513): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - x, y0 - y, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(513): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - x, y0 - y, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(514): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + y, y0 + x, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(514): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + y, y0 + x, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(515): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - y, y0 + x, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(515): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - y, y0 + x, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(516): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + y, y0 - x, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(516): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 + y, y0 - x, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(517): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - y, y0 - x, color);
-    ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(517): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-    ILI9341_DrawPixel(x0 - y, y0 - x, color);
-    ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(538): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + x, y0 + y, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(538): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + x, y0 + y, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(539): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + y, y0 + x, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(539): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + y, y0 + x, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(542): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + x, y0 - y, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(542): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + x, y0 - y, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(543): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + y, y0 - x, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(543): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 + y, y0 - x, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(546): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - y, y0 + x, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(546): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - y, y0 + x, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(547): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - x, y0 + y, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(547): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - x, y0 + y, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(550): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - y, y0 - x, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(550): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - y, y0 - x, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(551): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - x, y0 - y, color);
-      ~~~~~~~~~~~~~~~~~         ~~~^~~
-src/MY_ILI9341.c(551): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0 - x, y0 - y, color);
-      ~~~~~~~~~~~~~~~~~ ~~~^~~
-src/MY_ILI9341.c(594): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(x0, y0);
-                ^
-src/MY_ILI9341.c(595): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(x1, y1);
-                ^
-src/MY_ILI9341.c(599): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(x0, x1);
-                ^
-src/MY_ILI9341.c(600): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(y0, y1);
-                ^
-src/MY_ILI9341.c(605): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
-  dy = abs(y1 - y0);
-     ~ ^~~~~~~~~~~~
-src/MY_ILI9341.c(618): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(y0, x0, color);
-      ~~~~~~~~~~~~~~~~~     ^~
-src/MY_ILI9341.c(618): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(y0, x0, color);
-      ~~~~~~~~~~~~~~~~~ ^~
-src/MY_ILI9341.c(620): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0, y0, color);
-      ~~~~~~~~~~~~~~~~~     ^~
-src/MY_ILI9341.c(620): warning: implicit conversion changes signedness: 'int16_t' (aka 'short') to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-      ILI9341_DrawPixel(x0, y0, color);
-      ~~~~~~~~~~~~~~~~~ ^~
-src/MY_ILI9341.c(603): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-  int16_t dx, dy;
-          ^
-src/MY_ILI9341.c(652): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(y0, y1); swap(x0, x1);
-                ^
-src/MY_ILI9341.c(652): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(y0, y1); swap(x0, x1);
-                              ^
-src/MY_ILI9341.c(655): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(y2, y1); swap(x2, x1);
-                ^
-src/MY_ILI9341.c(655): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(y2, y1); swap(x2, x1);
-                              ^
-src/MY_ILI9341.c(658): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(y0, y1); swap(x0, x1);
-                ^
-src/MY_ILI9341.c(658): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    swap(y0, y1); swap(x0, x1);
-                              ^
-src/MY_ILI9341.c(696): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    if(a > b) swap(a,b);
-                       ^
-src/MY_ILI9341.c(710): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    if(a > b) swap(a,b);
-                       ^
-src/MY_ILI9341.c(672): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-    dx01 = x1 - x0,
-    ^
-src/MY_ILI9341.c(747): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-          ILI9341_DrawPixel(x+i, y+j, color);
-          ~~~~~~~~~~~~~~~~~      ~^~
-src/MY_ILI9341.c(747): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-          ILI9341_DrawPixel(x+i, y+j, color);
-          ~~~~~~~~~~~~~~~~~ ~^~
-src/MY_ILI9341.c(749): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+(i*size), y+(j*size), size + x+(i*size), size+1 + y+(j*size), color);
-          ~~~~~~~~~~~~~~~~~                                            ~~~~~~~~~~^~~~~~~~~
-src/MY_ILI9341.c(749): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+(i*size), y+(j*size), size + x+(i*size), size+1 + y+(j*size), color);
-          ~~~~~~~~~~~~~~~~~                         ~~~~~~~~^~~~~~~~~
-src/MY_ILI9341.c(749): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+(i*size), y+(j*size), size + x+(i*size), size+1 + y+(j*size), color);
-          ~~~~~~~~~~~~~~~~~             ~^~~~~~~~~
-src/MY_ILI9341.c(749): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+(i*size), y+(j*size), size + x+(i*size), size+1 + y+(j*size), color);
-          ~~~~~~~~~~~~~~~~~ ~^~~~~~~~~
-src/MY_ILI9341.c(753): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-          ILI9341_DrawPixel(x+i, y+j, bg);
-          ~~~~~~~~~~~~~~~~~      ~^~
-src/MY_ILI9341.c(753): warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
-          ILI9341_DrawPixel(x+i, y+j, bg);
-          ~~~~~~~~~~~~~~~~~ ~^~
-src/MY_ILI9341.c(755): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+i*size, y+j*size, size + x+i*size, size+1 + y+j*size, bg);
-          ~~~~~~~~~~~~~~~~~                                      ~~~~~~~~~~^~~~~~~
-src/MY_ILI9341.c(755): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+i*size, y+j*size, size + x+i*size, size+1 + y+j*size, bg);
-          ~~~~~~~~~~~~~~~~~                     ~~~~~~~~^~~~~~~
-src/MY_ILI9341.c(755): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+i*size, y+j*size, size + x+i*size, size+1 + y+j*size, bg);
-          ~~~~~~~~~~~~~~~~~           ~^~~~~~~
-src/MY_ILI9341.c(755): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-          ILI9341_Fill_Rect(x+i*size, y+j*size, size + x+i*size, size+1 + y+j*size, bg);
-          ~~~~~~~~~~~~~~~~~ ~^~~~~~~
-src/MY_ILI9341.c(768): warning: implicit conversion loses integer precision: 'int' to 'int16_t' (aka 'short') [-Wimplicit-int-conversion]
-                ILI9341_drawChar(x+(offset*i), y, text[i],color,bg,size);
-                ~~~~~~~~~~~~~~~~ ~^~~~~~~~~~~
-src/MY_ILI9341.c(822): warning: no newline at end of file [-Wnewline-eof]
-}
- ^
-99 warnings and 1 error generated.
-compiling MY_ILI9341.c...
-".\Objects\project.axf" - 3 Error(s), 108 Warning(s).
+static 
+src/main.c(48): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        volatile char rxByte = 'z';
+                      ^
+src/main.c(16): warning: In file included from...
+src/MY_ILI9341.h(129): warning: unused function 'drawCircleHelper' [-Wunused-function]
+static void drawCircleHelper( int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color);
+            ^
+src/MY_ILI9341.h(130): warning: unused function 'fillCircleHelper' [-Wunused-function]
+static void fillCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, int16_t delta, uint16_t color);
+            ^
+12 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=18216 RO-data=1104 RW-data=4 ZI-data=1836  
+FromELF: creating hex file...
+".\Objects\project.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -402,8 +106,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.6.0
-Target not created.
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>
