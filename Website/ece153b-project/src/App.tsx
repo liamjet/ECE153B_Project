@@ -208,7 +208,16 @@ function App() {
                     </Timeline>
                     <Timeline header="Week 3">
                         <ul>
-                            <li>TBA</li>
+                            <li>Completed the codebase for the project</li>
+                            <li>
+                                Connected all of the hardware compoenents - they
+                                are all working as expected
+                            </li>
+                            <li>
+                                Pivoted away from using a microphone and
+                                switched to using a bluetooth connection and a
+                                water spraying device
+                            </li>
                         </ul>
                     </Timeline>
                 </div>
