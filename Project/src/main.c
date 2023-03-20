@@ -48,10 +48,10 @@ int main(void) {
 	volatile char rxByte = 'z';
 	while(1) {
 		// [TODO]
-		printf("Snoring roommate? Type [s] to spray them, [b] blind them, or [a] for all:\n");
+		printf("Snoring roommate? Type [t] to tickle them, [b] blind them, or [a] for all:\n");
 		scanf("%c",&rxByte);
-		if (rxByte == 's' || rxByte == 'S') {
-				Full_Stepping_Clockwise();
+		if (rxByte == 't' || rxByte == 'T') {
+			Annoy();
 		}
 		else if (rxByte == 'b' || rxByte == 'B') {
 				for (int i = 0; i < 5; i++) {
@@ -63,7 +63,7 @@ int main(void) {
 				ILI9341_Fill(COLOR_BLACK);
 		}
 		else if (rxByte == 'a' || rxByte == 'A') {
-			Full_Stepping_Clockwise();
+			Annoy();
 			for (int i = 0; i < 5; i++) {
 				ILI9341_Fill(COLOR_CYAN);
 				delay(2500);
@@ -77,8 +77,4 @@ int main(void) {
 			printf("Invald input, please try again.");
 		}
 	}
-	
-
-	
-	
 }

@@ -32,53 +32,47 @@ void GPIO_Init(void){
 #define DELAY 18	// delay between steps of the sequences
 #define DELAY2 9
 
-void Full_Stepping_Clockwise(void){
-	// [FIXME, HOW DO I MAKE SURE IT STARTS IN THE RIGHT PLACE]
-	// make a loop that loops 32 times
-	// in each loop iteration toggle 8, 6, 9, 5
-	for (int j = 0; j < 512; j++)
+void Annoy(void) {
+	for (int i = 0; i < 4; i++)
 	{
-		GPIOC->ODR |= GPIO_ODR_OD8;
-		delay(DELAY);
-		GPIOC->ODR &= ~GPIO_ODR_OD8;
-		
-		GPIOC->ODR |= GPIO_ODR_OD6;
-		delay(DELAY);
-		GPIOC->ODR &= ~GPIO_ODR_OD6;
-		
-		GPIOC->ODR |= GPIO_ODR_OD9;
-		delay(DELAY);
-		GPIOC->ODR &= ~GPIO_ODR_OD9;
-		
-		GPIOC->ODR |= GPIO_ODR_OD5;
-		delay(DELAY);
-		GPIOC->ODR &= ~GPIO_ODR_OD5;
-		
+		Quarter_Clockwise();
+		Half_Stepping_Clockwise();
+		Half_Stepping_CounterClockwise();
 	}
-	
 }
 
-void Full_Stepping_CounterClockwise(void){
+void Quarter_Clockwise(void){
 	// [FIXME, HOW DO I MAKE SURE IT STARTS IN THE RIGHT PLACE]
-	// make a loop that loops 512 times
-	// in each loop iteration toggle 9, 5, 8, 6
-	for (int j = 0; j < 512; j++)
+	// make a loop that loops 4096 times
+	// in each loop iteration toggle 5, 56, 6, 68, 8, 89, 9, 95
+	for (int j = 0; j < 128; j++)
 	{
-		GPIOC->ODR |= GPIO_ODR_OD5;
-		delay(DELAY);
-		GPIOC->ODR &= ~GPIO_ODR_OD5;
 		
-		GPIOC->ODR |= GPIO_ODR_OD9;
-		delay(DELAY);
-		GPIOC->ODR &= ~GPIO_ODR_OD9;
-		
+		delay(DELAY2);
+
 		GPIOC->ODR |= GPIO_ODR_OD6;
-		delay(DELAY);
-		GPIOC->ODR &= ~GPIO_ODR_OD6;
-		
-		GPIOC->ODR |= GPIO_ODR_OD8;
-		delay(DELAY);
+		delay(DELAY2);
 		GPIOC->ODR &= ~GPIO_ODR_OD8;
+
+		delay(DELAY2);
+
+		GPIOC->ODR |= GPIO_ODR_OD9;
+		delay(DELAY2);
+		GPIOC->ODR &= ~GPIO_ODR_OD6;
+
+		delay(DELAY2);
+
+
+		GPIOC->ODR |= GPIO_ODR_OD5;
+		delay(DELAY2);
+		GPIOC->ODR &= ~GPIO_ODR_OD9;
+
+		delay(DELAY2);
+
+
+		GPIOC->ODR |= GPIO_ODR_OD8;
+		delay(DELAY2);
+		GPIOC->ODR &= ~GPIO_ODR_OD5;
 	}
 }
 
@@ -86,7 +80,7 @@ void Half_Stepping_Clockwise(void){
 	// [FIXME, HOW DO I MAKE SURE IT STARTS IN THE RIGHT PLACE]
 	// make a loop that loops 4096 times
 	// in each loop iteration toggle 5, 56, 6, 68, 8, 89, 9, 95
-	for (int j = 0; j < 512; j++)
+	for (int j = 0; j < 10; j++)
 	{
 		
 		delay(DELAY2);
@@ -121,7 +115,7 @@ void Half_Stepping_CounterClockwise(void){
 	// [FIXME, HOW DO I MAKE SURE IT STARTS IN THE RIGHT PLACE]
 	// make a loop that loops 4096 times
 	// in each loop iteration toggle 95, 9, 89, 8, 86, 6, 56, 5
-	for (int j = 0; j < 512; j++)
+	for (int j = 0; j < 10; j++)
 	{
 		
 		delay(DELAY2);

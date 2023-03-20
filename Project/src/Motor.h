@@ -12,9 +12,9 @@
 #include "stm32l476xx.h"
 
 void GPIO_Init(void);
-void Full_Stepping_Clockwise(void);
-void Full_Stepping_CounterClockwise(void);
-void Full_Stepping_CounterClockwise(void);
+void Quarter_Clockwise(void);
+void Half_Stepping_Clockwise(void);
 void Half_Stepping_CounterClockwise(void);
+void Annoy(void);
 
 #endif
