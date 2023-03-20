@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Content from "./components/Content";
 import Paragraph from "./components/Paragraph";
@@ -9,10 +8,9 @@ import Timeline from "./components/Timeline";
 import Stm32 from "./resources/Stm32.png";
 import Bluetooth from "./resources/Bluetooth.jpg";
 import LCD from "./resources/LCD.jpeg";
-import AMP from "./resources/Amp.jpg";
-import Speaker from "./resources/Speaker.jpg";
-import Microphone from "./resources/Microphone.jpeg";
-import BlockDiagram from "./resources/Block-Diagram.png";
+import Motor from "./resources/Motor.webp";
+import Controller from "./resources/Controller.jpeg";
+import BlockDiagram from "./resources/Block-Diagram.jpeg";
 
 function App() {
     const [toggleState, setToggleState] = useState(1);
@@ -25,9 +23,7 @@ function App() {
         <div className="App">
             <div className="Hero">
                 <div className="HeroWrapper">
-                    <h1 className="Title">
-                        Roommate Snore Detector and Corrector
-                    </h1>
+                    <h1 className="Title">Roommate Snore Corrector</h1>
                     <p className="Subtitle">
                         By: Liam Pang-Naylor, Jacob Eisner - ECE 153b
                     </p>
@@ -61,16 +57,16 @@ function App() {
                 >
                     <Paragraph header="Purpose:">
                         <p>
-                            The Snore Detector and Corrector will detect the
-                            user's roommate’s snoring and provide the user with
-                            the necessary options to correct this behavior, in
-                            the form of flashing lights, loud noises, or both.
-                            The user may activate snore countermeasures through
-                            their phone, promptly waking the offender and
-                            ideally reducing snoring through any means
-                            necessary. It will also be able to auto-detect and
-                            suppress snoring using an onboard microphone and
-                            automatic snore countermeasures.
+                            The Snore Corrector will detect the user's
+                            roommate’s snoring and provide the user with the
+                            necessary options to correct this behavior in the
+                            form of flashing lights and nasal stimuli. The user
+                            may activate snore countermeasures through their
+                            phone, promptly waking the offender and ideally
+                            reducing snoring through any means necessary. Users
+                            are also able to choose their level of intervention
+                            by choosing the specific command they want to send
+                            to the device
                         </p>
                     </Paragraph>
                     <Paragraph
@@ -100,25 +96,6 @@ function App() {
                             </ul>
                         </PartCard>
                         <PartCard
-                            name="Adafruit I2S MEMS Microphone"
-                            image={Microphone}
-                            link="https://www.amazon.com/Adafruit-I2S-MEMS-Microphone-Breakout/dp/B06XNL2GBW"
-                        >
-                            <ul>
-                                <li>
-                                    Pure digital microphone which can be
-                                    interfaced to by using a SPI block as I2S.
-                                </li>
-                                <li>
-                                    The STM board has seven SPI blocks so there
-                                    will be no compatibility issues.
-                                </li>
-                                <li>
-                                    Used to detect roommate’s obnoxious snoring
-                                </li>
-                            </ul>
-                        </PartCard>
-                        <PartCard
                             name="HC-05 Bluetooth Chip"
                             image={Bluetooth}
                             link="https://www.amazon.com/HiLetgo-Wireless-Bluetooth-Transceiver-Arduino/dp/B071YJG8DR/ref=sr_1_5?keywords=bluetooth+hc-05&qid=1677716575&sr=8-5"
@@ -133,30 +110,6 @@ function App() {
                             </ul>
                         </PartCard>
                         <PartCard
-                            name="Adafruit I2C Stereo 2.8W Class D Audio Amplifier (SUBJECT TO CHANGE)"
-                            image={AMP}
-                            link="https://www.amazon.com/Stereo-2-8W-Class-Audio-Amplifier/dp/B096YFBBFF"
-                        >
-                            <ul>
-                                <li>Uses I2C communication standard</li>
-                                <li>
-                                    Amplifies the signal sent to the speaker
-                                </li>
-                            </ul>
-                        </PartCard>
-                        <PartCard
-                            name="uxcell Metal Shell Round Internal Magnet Speaker"
-                            image={Speaker}
-                            link="https://www.amazon.com/Uxcell-a15080600ux0275-Internal-Magnet-Speaker/dp/B0177ABRQ6/ref=sr_1_3?keywords=8+ohm+speaker&qid=1678050488&sr=8-3#customerReviews"
-                        >
-                            <ul>
-                                <li>
-                                    Used to play a sound to wake the roommate’s
-                                    eyes
-                                </li>
-                            </ul>
-                        </PartCard>
-                        <PartCard
                             name="2.8 TFT SPI 240X320 V1.2"
                             image={LCD}
                             link="https://protosupplies.com/product/tft-lcd-2-8-240x320-rgb-spi-display-with-touchscreen/"
@@ -167,6 +120,32 @@ function App() {
                                     Used to project agitating light into
                                     roommate’s eyes
                                 </li>
+                            </ul>
+                        </PartCard>
+                        <PartCard
+                            name="28BYJ-48 – 5V Stepper Motor"
+                            image={Motor}
+                            link="https://www.amazon.com/28BYJ-48-ULN2003-Stepper-Driver-Arduino/dp/B07YRHX73L/ref=asc_df_B07YRHX73L?tag=bingshoppinga-20&linkCode=df0&hvadid=79989562808694&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=&hvtargid=pla-4583589111905551&psc=1"
+                        >
+                            <ul>
+                                <li>
+                                    Recieves commands through the controller and
+                                    uses half stepping
+                                </li>
+                                <li>
+                                    Used to move the feathers into the
+                                    roommate’s nose
+                                </li>
+                            </ul>
+                        </PartCard>
+                        <PartCard
+                            name="ULN2003 Control Board"
+                            image={Controller}
+                            link="https://www.amazon.com/28BYJ-48-ULN2003-Stepper-Driver-Arduino/dp/B07YRHX73L/ref=asc_df_B07YRHX73L?tag=bingshoppinga-20&linkCode=df0&hvadid=79989562808694&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=&hvtargid=pla-4583589111905551&psc=1"
+                        >
+                            <ul>
+                                <li>Controlls the stepper motor</li>
+                                <li>Communicates with the STM-32 board</li>
                             </ul>
                         </PartCard>
                     </div>
@@ -215,8 +194,8 @@ function App() {
                             </li>
                             <li>
                                 Pivoted away from using a microphone and
-                                switched to using a bluetooth connection and a
-                                water spraying device
+                                switched to using a bluetooth connection and
+                                feathers to awake the roomate
                             </li>
                         </ul>
                     </Timeline>

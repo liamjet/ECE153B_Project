@@ -36,8 +36,11 @@ void Annoy(void) {
 	for (int i = 0; i < 4; i++)
 	{
 		Quarter_Clockwise();
-		Half_Stepping_Clockwise();
-		Half_Stepping_CounterClockwise();
+		for (int j = 0; j < 5; j++)
+		{
+			Half_Stepping_Clockwise();
+			Half_Stepping_CounterClockwise();
+		}
 	}
 }
 
