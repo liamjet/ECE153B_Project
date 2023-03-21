@@ -68,13 +68,20 @@ function App() {
                             by choosing the specific command they want to send
                             to the device
                         </p>
+                        <a href="https://github.com/liamjet/ECE153B_Project">
+                            Project on Github
+                        </a>
                     </Paragraph>
                     <Paragraph
                         header="Block Diagram:"
                         image={BlockDiagram}
                     ></Paragraph>
                     <Paragraph header="Video Demonstration:">
-                        <i>-Coming Soon-</i>
+                        <iframe
+                            src="https://www.youtube.com/embed/1YaAhTcsAPk"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        ></iframe>
                     </Paragraph>
                 </div>
                 <div
@@ -197,6 +204,14 @@ function App() {
                                 switched to using a bluetooth connection and
                                 feathers to awake the roomate
                             </li>
+                        </ul>
+                    </Timeline>
+                    <Timeline header="Week 4">
+                        <ul>
+                            <li>
+                                Completed the filming and editing of the demo
+                            </li>
+                            <li>Presented the project</li>
                         </ul>
                     </Timeline>
                 </div>

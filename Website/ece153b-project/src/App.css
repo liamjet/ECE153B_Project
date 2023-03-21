@@ -88,6 +88,11 @@ ul {
     border-color: #ef5da8;
     border-width: 4px;
 }
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+}
 @media (max-width: 800px) {
     .Parts {
         max-width: 400px;
