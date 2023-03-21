@@ -5,7 +5,7 @@ by Liam Pang-Naylor and Jacob Eisner
 
 ## Overview/Goal/Purpose
 
-The Bluetooth Snore Corrector will provides the user the options to correct snoring behavior, in the form of flashing lights, loud noises, or both. The user may activate snore countermeasures through their phone, promptly waking the offender and ideally reducing snoring through any means necessary.
+The Bluetooth Snore Corrector will provide the user with several options to correct snoring behavior, in the form of feathers on the nose, flashing lights, or both. The user may activate snore countermeasures through their phone or laptop through bluetooth, promptly waking the offender and ideally reducing snoring through any means necessary.
 
 ## Peripherals
 ### HC-05 Bluetooth Chip <br>
