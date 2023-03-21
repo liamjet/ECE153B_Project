@@ -1,11 +1,11 @@
-# ECE 153B Final Project: Snore Detector and Corrector
+# ECE 153B Final Project: Bluetooth Snore Corrector
 by Liam Pang-Naylor and Jacob Eisner
 
 [Website](https://liamjet.github.io/ECE153B_Project/) <br>
 
 ## Overview/Goal/Purpose
 
-The Snore Detector and Corrector will detect the user's roommate’s snoring and provide the user with the necessary options to correct this behavior, in the form of flashing lights, loud noises, or both. The user may activate snore countermeasures through their phone, promptly waking the offender and ideally reducing snoring through any means necessary. It will also be able to auto-detect and suppress snoring using an onboard microphone and automatic snore countermeasures.
+The Bluetooth Snore Corrector will provides the user the options to correct snoring behavior, in the form of flashing lights, loud noises, or both. The user may activate snore countermeasures through their phone, promptly waking the offender and ideally reducing snoring through any means necessary.
 
 ## Peripherals
 ### HC-05 Bluetooth Chip <br>
@@ -17,7 +17,7 @@ The Snore Detector and Corrector will detect the user's roommate’s snoring and
 [Amazon](https://www.amazon.com/HiLetgo-240X320-Resolution-Display-ILI9341/dp/B073R7BH1B) <br>
 [LCD Wiki](http://www.lcdwiki.com/2.8inch_SPI_Module_ILI9341_SKU:MSP2807) <br>
 
-### Adafruit I2S MEMS Microphone <br>
+### Adafruit I2S MEMS Microphone [Deprecated]<br> 
 [Amazon](https://www.amazon.com/Adafruit-I2S-MEMS-Microphone-Breakout/dp/B06XNL2GBW) <br>
 [Guide](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout/) <br>
 [STM Guide](https://www.youtube.com/watch?v=z25zckhHzC8) <br>
@@ -25,15 +25,17 @@ The Snore Detector and Corrector will detect the user's roommate’s snoring and
 
 The Adafruit I2S MEMS Microphone is a pure digital microphone which can be interfaced to the STM board by using a SPI block as I2S. The STM board has seven SPI blocks so there will be no compatibility issues with the SPI Display.
 
-### Adafruit I2C Stereo 2.8W Class D Audio Amplifier (SUBJECT TO CHANGE) <br>
+### Adafruit I2C Stereo 2.8W Class D Audio Amplifier [Deprecated] <br>
 [Amazon](https://www.amazon.com/Stereo-2-8W-Class-Audio-Amplifier/dp/B096YFBBFF) <br>
 
-### uxcell a15080600ux0275 Metal Shell Round Internal Magnet Speaker 2W 8 Ohm
+### uxcell a15080600ux0275 Metal Shell Round Internal Magnet Speaker 2W 8 Ohm [Deprecated] <br>
 [Amazon](https://www.amazon.com/Uxcell-a15080600ux0275-Internal-Magnet-Speaker/dp/B0177ABRQ6/ref=sr_1_3?keywords=8+ohm+speaker&qid=1678050488&sr=8-3#customerReviews) <br>
 [Guide](https://www.adafruit.com/product/1712)
 
+### Stepper Motor
+
 ## Block Diagram
-<img width="500" alt="Picture1" src="https://user-images.githubusercontent.com/61168583/221713957-f15b9de0-710e-4668-9106-0fa8c4420742.png">
+![Block-Diagram](https://user-images.githubusercontent.com/61168583/226708290-f926dfb4-7979-47e4-8b63-df2c4bdeb22e.jpeg)
 
 ## Responsibilities
 ### Liam <br>
