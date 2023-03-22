@@ -57,16 +57,13 @@ function App() {
                 >
                     <Paragraph header="Purpose:">
                         <p>
-                            The Snore Corrector will detect the user's
-                            roommate’s snoring and provide the user with the
-                            necessary options to correct this behavior in the
-                            form of flashing lights and nasal stimuli. The user
-                            may activate snore countermeasures through their
-                            phone, promptly waking the offender and ideally
-                            reducing snoring through any means necessary. Users
-                            are also able to choose their level of intervention
-                            by choosing the specific command they want to send
-                            to the device
+                            The Bluetooth Snore Corrector will provide the user
+                            with several options to correct snoring behavior, in
+                            the form of feathers on the nose, flashing lights,
+                            or both. The user may activate snore countermeasures
+                            through their phone or laptop through bluetooth,
+                            promptly waking the offender and ideally reducing
+                            snoring through any means necessary.
                         </p>
                         <a href="https://github.com/liamjet/ECE153B_Project">
                             Project on Github
